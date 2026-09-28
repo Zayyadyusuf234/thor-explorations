@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thor Explorations - Reserve, Holiday and Royalty</title>
+<meta name="description" content="A gold mine that has already produced 82 per cent of its only published reserve. An independent project finance and credit analysis of Segilola, Nigeria's first commercial gold mine. Yusuf Zayyad Aliyu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Spectral:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12202A; --ink-2:#33454F; --dim:#6B7D84;
+  --paper:#E8ECEA; --sheet:#F4F6F5; --rule:#C3CFCA;
+  --flow:#1D6B62; --gap:#8A2B3D; --ore:#9A7B1F;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:17px;line-height:1.6;
+  font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.14;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1.1em;max-width:68ch}
+a{color:var(--flow);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--flow);outline-offset:3px}
+
+.masthead{border-bottom:1px solid var(--rule);padding:22px 0 18px}
+.masthead .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;align-items:baseline}
+.mast-name{font-family:var(--serif);font-size:19px;font-weight:600}
+.mast-meta{font-size:14px;color:var(--dim)}
+.mast-meta span+span::before{content:"";display:inline-block;width:1px;height:11px;
+  background:var(--rule);margin:0 12px -1px}
+
+.hero{padding:64px 0 40px}
+.kicker{font-size:14px;color:var(--gap);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);max-width:18ch}
+.hero .stand{font-size:clamp(17px,2vw,20px);color:var(--ink-2);max-width:62ch;margin-top:22px}
+
+.chart{margin:54px 0 12px}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart-legend{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:28px;
+  padding-top:18px;border-top:1px solid var(--rule)}
+.leg{max-width:30ch}
+.leg b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.1}
+.leg span{font-size:14.5px;color:var(--dim);display:block;margin-top:4px}
+.leg.is-gap b{color:var(--gap)}
+.leg.is-flow b{color:var(--flow)}
+.leg.is-ore b{color:var(--ore)}
+
+section{padding:52px 0;border-top:1px solid var(--rule)}
+section h2{font-size:clamp(25px,3.2vw,34px);margin-bottom:8px;max-width:24ch}
+.lede{color:var(--ink-2);margin-top:14px}
+
+.facts{border-top:1px solid var(--rule);margin-top:28px}
+.facts div{display:flex;flex-wrap:wrap;gap:4px 20px;justify-content:space-between;
+  padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts dt{color:var(--ink-2);font-size:15.5px;flex:1 1 15rem}
+.facts dd{margin:0;font-weight:600;font-size:15.5px;text-align:right}
+
+.tbl-scroll{overflow-x:auto;margin-top:28px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:15.5px}
+th,td{text-align:right;padding:12px 14px;border-bottom:1px solid var(--rule)}
+th:first-child,td:first-child{text-align:left;padding-left:0}
+td:last-child,th:last-child{padding-right:0}
+thead th{font-weight:600;font-size:14px;color:var(--dim);
+  border-bottom:1px solid var(--ink);vertical-align:bottom}
+thead th small{display:block;font-weight:400;font-size:12.5px;color:var(--dim)}
+.neg{color:var(--gap)}
+.pos{color:var(--flow)}
+.ore{color:var(--ore)}
+tbody tr.emph td,tbody tr.emph th{font-weight:600}
+
+.pull{margin:34px 0 0;padding:30px 0 4px;border-top:3px solid var(--ink)}
+.pull p{font-family:var(--serif);font-size:clamp(21px,2.9vw,29px);line-height:1.34;
+  max-width:30ch;margin:0}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+.col h3{font-size:21px;margin-bottom:4px}
+.col .role{font-size:14.5px;color:var(--dim);margin-bottom:14px}
+.col p{font-size:16px;color:var(--ink-2);margin:0}
+.col .big{font-family:var(--serif);font-size:38px;font-weight:600;line-height:1.1;
+  display:block;margin:14px 0 4px}
+.col .biglab{font-size:14.5px;color:var(--dim);display:block;margin-bottom:14px}
+
+.bars{margin-top:30px}
+.bar-row{display:grid;grid-template-columns:minmax(9rem,18rem) 1fr auto;
+  gap:14px;align-items:center;padding:9px 0}
+.bar-label{font-size:15.5px;color:var(--ink-2)}
+.bar-track{background:var(--sheet);height:24px;position:relative;border-radius:1px}
+.bar-fill{position:absolute;inset:0 auto 0 0;border-radius:1px}
+.bar-fill.px{background:var(--gap)}
+.bar-fill.ore{background:var(--ore)}
+.bar-fill.tax{background:var(--flow)}
+.bar-val{font-size:15px;font-weight:600;min-width:3.4rem;text-align:right}
+
+.reg{display:flex;flex-wrap:wrap;gap:26px 46px;margin-top:30px;
+  padding-top:24px;border-top:1px solid var(--rule)}
+.reg div b{font-family:var(--serif);font-size:34px;font-weight:600;display:block;line-height:1}
+.reg div span{font-size:14.5px;color:var(--dim);display:block;margin-top:5px;max-width:24ch}
+
+details{border-top:1px solid var(--rule);padding:16px 0}
+summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";display:inline-block;width:1.4em;color:var(--flow);font-weight:600}
+details[open] summary::before{content:"–"}
+details p{margin:12px 0 0 1.4em;font-size:16px;color:var(--ink-2)}
+
+footer{border-top:1px solid var(--rule);padding:44px 0 72px;font-size:14.5px;color:var(--dim)}
+footer strong{color:var(--ink);font-weight:600}
+footer p{max-width:76ch}
+
+@media (max-width:720px){ .split{grid-template-columns:1fr;gap:28px} }
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .hero{padding:44px 0 30px}
+  section{padding:40px 0}
+  .bar-row{grid-template-columns:1fr auto;gap:4px 12px}
+  .bar-label{grid-column:1/-1}
+  .facts div{flex-direction:column}
+  .facts dd{text-align:left}
+}
+@media (prefers-reduced-motion:no-preference){ .bar-fill{transition:width .4s ease} }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#E6ECE9; --ink-2:#B3C2BE; --dim:#8497A0;
+    --paper:#0E1A21; --sheet:#182730; --rule:#2C3F49;
+    --flow:#4FAE9F; --gap:#D1657A; --ore:#C9A648;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E6ECE9; --ink-2:#B3C2BE; --dim:#8497A0;
+  --paper:#0E1A21; --sheet:#182730; --rule:#2C3F49;
+  --flow:#4FAE9F; --gap:#D1657A; --ore:#C9A648;
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <span class="mast-name">Yusuf Zayyad Aliyu</span>
+    <span class="mast-meta">
+      <span>Project finance &amp; credit risk modelling</span>
+      <span>Abuja, Nigeria</span>
+    </span>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <p class="kicker">Independent analysis · Thor Explorations · Segilola, Osun State</p>
+    <h1>A gold mine that has already produced 82% of its only published reserve.</h1>
+    <p class="stand">Thor Explorations has not published a Segilola reserve or resource since
+    March 2021. Everything since is drill results and a scoping study. The company is debt free,
+    pays no income tax at all, and is sitting on the best gold price in history.</p>
+
+    <div class="chart">
+      <svg viewBox="0 0 1000 250" role="img"
+           aria-label="Of a 486,214 ounce recoverable reserve estimated in 2021, 398,991 ounces had been poured by mid-2026, leaving 87,223 ounces plus a 47,425 ounce stockpile.">
+        <text x="0" y="16" fill="var(--dim)" font-family="Archivo,sans-serif" font-size="16">2021 probable reserve, recoverable: 486,214 oz</text>
+        <rect x="0" y="34" width="1000" height="62" fill="var(--sheet)" stroke="var(--rule)"/>
+        <rect x="0" y="34" width="821" height="62" fill="var(--gap)"/>
+        <text x="410" y="72" text-anchor="middle" fill="#F4F6F5"
+              font-family="Archivo,sans-serif" font-size="19" font-weight="600">poured 2022 to H1 2026 — 398,991 oz</text>
+        <text x="910" y="72" text-anchor="middle" fill="var(--ink)"
+              font-family="Archivo,sans-serif" font-size="17" font-weight="600">87,223</text>
+        <text x="0" y="138" fill="var(--dim)" font-family="Archivo,sans-serif" font-size="16">Plus the low grade stockpile at 31 Dec 2025</text>
+        <rect x="0" y="156" width="98" height="40" fill="var(--ore)"/>
+        <text x="112" y="182" fill="var(--ore)"
+              font-family="Archivo,sans-serif" font-size="17" font-weight="600">47,425 oz recoverable</text>
+        <line x1="0" y1="220" x2="1000" y2="220" stroke="var(--rule)"/>
+        <text x="0" y="244" fill="var(--ink)" font-family="Archivo,sans-serif" font-size="17"
+              font-weight="600">Remaining cover: about 1.7 years at the guided 75,000 to 85,000 ounces a year</text>
+      </svg>
+    </div>
+    <p style="font-size:14.5px;color:var(--dim);margin-top:10px">Every input is a company filing:
+    the March 2021 reserve of 517,800 oz contained, the disclosed 93.9% plant recovery, and the
+    five separately disclosed annual production figures. The arithmetic is the only thing added.
+    This is not a forecast of closure - it is a statement about what the published disclosure
+    supports. An updated estimate was expected by the end of 2026.</p>
+
+    <div class="chart-legend">
+      <div class="leg is-gap"><b>82.1%</b><span>of the 2021 reserve already mined</span></div>
+      <div class="leg is-gap"><b>0.0%</b><span>effective tax rate, every year since production
+        began</span></div>
+      <div class="leg is-ore"><b>7x</b><span>increase in the royalty per ounce in two
+        years</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>A reserve is not a plan</h2>
+    <p class="lede">Mines routinely produce above reserve by converting resource and extending
+    pits. Thor is drilling hard below the Segilola pit and the intercepts are genuinely good -
+    19.4 m at 3.01 g/t, 2 m at 9.27 g/t, open at depth. The point is not that conversion cannot
+    happen. It is that on today's disclosure, none of it has.</p>
+
+    <dl class="facts">
+      <div><dt>Published probable reserve, March 2021</dt><dd>517,800 oz</dd></div>
+      <div><dt>Indicated and inferred resource, same vintage</dt>
+        <dd class="ore">144,000 oz</dd></div>
+      <div><dt>Reserve or resource published since</dt><dd class="neg">none</dd></div>
+      <div><dt>Underground study status</dt><dd class="neg">scoping only</dd></div>
+      <div><dt>Gold price behind the 2021 reserve</dt><dd>$1,650/oz</dd></div>
+      <div><dt>Updated estimate guided for</dt><dd>end-2026</dd></div>
+    </dl>
+
+    <div class="pull">
+      <p>Everything beyond about eighteen months is resource, drill results and a scoping study.
+      Not reserve.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>It has never paid a naira of income tax</h2>
+    <p class="lede">The effective tax rate has been nil in every year since production began,
+    under Nigeria's Pioneer Status incentive. The FY2025 reconciliation shows how.</p>
+
+    <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th scope="col">FY2025 tax reconciliation</th><th scope="col">USD m</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Expected tax at the statutory rate</th><td>53.8</td></tr>
+        <tr><th scope="row">Effect of rate differences</th><td>6.7</td></tr>
+        <tr><th scope="row">Nigerian education tax</th><td>6.1</td></tr>
+        <tr><th scope="row">Other items</th><td>1.2</td></tr>
+        <tr><th scope="row">Mining convention benefit</th><td class="ore">(67.8)</td></tr>
+        <tr class="emph"><th scope="row">Income tax charged</th><td class="neg">nil</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="lede" style="margin-top:30px">The statute that granted it — the Industrial
+    Development (Income Tax Relief) Act - has been repealed and replaced by a tax-credit regime.
+    Section 28 of the Minerals and Mining Act 2007, which gave a separate mining holiday, was
+    deleted by the Nigeria Tax Act 2025. <strong>No expiry date appears anywhere in the
+    filings.</strong></p>
+
+    <dl class="facts">
+      <div><dt>Companies income tax after the holiday</dt><dd>30%</dd></div>
+      <div><dt>Development levy on assessable profit, from 2026</dt><dd>4%</dd></div>
+      <div><dt>Minimum effective tax rate for a multinational group, from 2026</dt><dd>15%</dd></div>
+      <div><dt>Worth at FY2025 profitability</dt><dd class="neg">$60m+ a year</dd></div>
+    </dl>
+
+    <div class="pull">
+      <p>The 15% minimum rate cuts through the holiday from 2026, so it is already worth far less
+      than its headline before it expires.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The royalty nobody has priced</h2>
+    <p class="lede">Nigeria charges gold royalty as a fixed naira sum per ounce, not the 3% ad
+    valorem that gets quoted. The rate doubled on 1 July 2025 and collection moved to the Nigeria
+    Revenue Service on 1 January 2026.</p>
+
+    <div class="bars">
+      <div class="bar-row"><span class="bar-label">FY2024, as realised</span>
+        <span class="bar-track"><span class="bar-fill ore" style="width:11%"></span></span>
+        <span class="bar-val">$14</span></div>
+      <div class="bar-row"><span class="bar-label">FY2025, as realised</span>
+        <span class="bar-track"><span class="bar-fill ore" style="width:24%"></span></span>
+        <span class="bar-val">$31</span></div>
+      <div class="bar-row"><span class="bar-label">H1 2026, as realised</span>
+        <span class="bar-track"><span class="bar-fill px" style="width:78%"></span></span>
+        <span class="bar-val">$100</span></div>
+      <div class="bar-row"><span class="bar-label">FY2030, modelled</span>
+        <span class="bar-track"><span class="bar-fill px" style="width:100%"></span></span>
+        <span class="bar-val">$129</span></div>
+    </div>
+    <p style="font-size:14.5px;color:var(--dim);margin-top:16px">Royalty per ounce of gold, from
+    the disclosed royalty expense over disclosed ounces. Two law firms state the Nigeria Tax Act
+    2025 took gold to a 15% ad valorem rate from January 2026; the company's own H1 2026 charge is
+    2.3% of revenue, which contradicts that. The model carries both bases rather than choosing.</p>
+
+    <p class="lede" style="margin-top:26px">One more thing most models leave out entirely: export
+    supervision, customs, cadastre and aviation handling fees came to <strong>$4.35m in
+    FY2025</strong>, about $46 an ounce - larger than the royalty was that year. Gold doré is
+    air-freighted.</p>
+  </section>
+
+  <section>
+    <h2>All three land in 2028</h2>
+    <p class="lede">Separately, each cliff is survivable. The model exists to show what they do
+    together, against a replacement mine that has not been approved.</p>
+
+    <div class="tbl-scroll">
+    <table>
+      <thead>
+        <tr><th scope="col">Base case</th>
+        <th scope="col">Reserve<small>years left</small></th>
+        <th scope="col">Tax rate</th>
+        <th scope="col">Royalty<small>per oz</small></th>
+        <th scope="col">Free cash flow<small>USD m</small></th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">FY2026</th><td>1.1</td><td>15%</td><td>$100</td>
+          <td class="pos">+256</td></tr>
+        <tr class="emph"><th scope="row">FY2028</th><td class="neg">0.0</td>
+          <td class="neg">34%</td><td class="neg">$113</td><td class="neg">−63</td></tr>
+        <tr><th scope="row">FY2030</th><td>0.0</td><td>34%</td><td>$129</td>
+          <td class="pos">+146</td></tr>
+        <tr><th scope="row">FY2034</th><td>0.0</td><td>34%</td><td>$165</td>
+          <td class="pos">+90</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="font-size:14.5px;color:var(--dim);margin-top:16px">Douta first production assumed
+    2029, a year later than the study guided, because the decision had already slipped by August
+    2026. Profit after tax troughs at $78m in FY2028 - 40% of FY2025.</p>
+
+    <div class="split">
+      <div class="col">
+        <h3>Douta is not a smaller Segilola</h3>
+        <p class="role">All-in sustaining cost, USD per ounce</p>
+        <span class="big" style="color:var(--gap)">$1,890</span>
+        <span class="biglab">against Segilola's $927 in FY2025</span>
+        <p>$253.5m of pre-production capital, more than the cash on hand, at roughly double the
+        operating cost. The decision was guided for the first half of 2026 and had not been taken
+        by August. On the published reserve, Segilola runs out of reserve-backed ounces before
+        Douta pours its first.</p>
+      </div>
+      <div class="col">
+        <h3>What is holding it up</h3>
+        <p class="role">Gold price FY2028 needs to fund itself</p>
+        <span class="big" style="color:var(--gap)">$4,552</span>
+        <span class="biglab">against the company's own long-term deck of $3,500</span>
+        <p>The group funds Douta from cash on base case - but only because it banks a year of
+        cash at a gold price near $4,600 first. At its own long-term assumption, that buffer is
+        not there. The mine itself stops making money only below $1,563 an ounce, which is the
+        honest counterpoint: Segilola is a genuinely good asset.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The orebody matters more than the tax</h2>
+    <p class="lede">Moving one assumption at a time from best to worst and measuring the swing in
+    cumulative profit over Segilola's remaining life. The measure is dollars, so a lever that
+    changes the margin per ounce can be compared with one that changes how many ounces there are.</p>
+
+    <div class="bars">
+      <div class="bar-row"><span class="bar-label">Long-term gold price</span>
+        <span class="bar-track"><span class="bar-fill px" style="width:100%"></span></span>
+        <span class="bar-val">$799m</span></div>
+      <div class="bar-row"><span class="bar-label">Ounces found beyond the 2021 resource</span>
+        <span class="bar-track"><span class="bar-fill ore" style="width:64%"></span></span>
+        <span class="bar-val">$511m</span></div>
+      <div class="bar-row"><span class="bar-label">Cost inflation per ounce</span>
+        <span class="bar-track"><span class="bar-fill px" style="width:25%"></span></span>
+        <span class="bar-val">$202m</span></div>
+      <div class="bar-row"><span class="bar-label">Resource converting to reserve</span>
+        <span class="bar-track"><span class="bar-fill ore" style="width:20%"></span></span>
+        <span class="bar-val">$156m</span></div>
+      <div class="bar-row"><span class="bar-label">When the tax holiday ends</span>
+        <span class="bar-track"><span class="bar-fill tax" style="width:19%"></span></span>
+        <span class="bar-val">$148m</span></div>
+      <div class="bar-row"><span class="bar-label">Royalty escalation</span>
+        <span class="bar-track"><span class="bar-fill tax" style="width:6%"></span></span>
+        <span class="bar-val">$50m</span></div>
+      <div class="bar-row"><span class="bar-label">Royalty per ounce</span>
+        <span class="bar-track"><span class="bar-fill tax" style="width:3%"></span></span>
+        <span class="bar-val">$23m</span></div>
+    </div>
+
+    <div class="pull">
+      <p>Two of the top four are questions about how many ounces are in the ground, and neither
+      has been answered in public since 2021.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How the model was built</h2>
+    <p class="lede">The central moves are to separate ounces that are reserves from ounces that
+    have to convert, to model the royalty on the basis the company actually discloses rather than
+    the one everyone quotes, and to treat the tax holiday as a scenario because its expiry is
+    nowhere in the filings.</p>
+    <div class="reg">
+      <div><b>90</b><span>inputs taken directly from published filings and official data</span></div>
+      <div><b>4</b><span>derived by calculation from disclosed figures</span></div>
+      <div><b>22</b><span>analyst estimates, each named and sourced as such</span></div>
+    </div>
+    <div style="margin-top:34px">
+      <details>
+        <summary>Structure</summary>
+        <p>Fourteen tabs, 1,402 formulas, 33 automated integrity checks, FY2024 to FY2036, in US
+        dollars because that is how the company reports. The ounce account is the spine: opening
+        reserve, plus conversion, plus exploration, less production, equals closing reserve, with
+        the stockpile drawn on only once the pit cannot fill the plant.</p>
+      </details>
+      <details>
+        <summary>The depletion calculation, and what it does and does not claim</summary>
+        <p>The 2021 probable reserve of 517,800 oz contained, at the disclosed 93.9% recovery,
+        gives 486,214 oz recoverable. Production poured from FY2022 to H1 2026 - five separately
+        disclosed figures - totals 398,991 oz, which is 82.1% of it. This is arithmetic on
+        published numbers, not a company statement, and it is labelled as such on the register.
+        It does not claim the mine is closing. It claims the published reserve no longer supports
+        the production profile, which is a different and much narrower statement.</p>
+      </details>
+      <details>
+        <summary>Why the royalty is modelled two ways</summary>
+        <p>Thor's accounts state a royalty of a fixed naira sum per ounce produced, doubled from
+        ₦16,218 to ₦32,436 on 1 July 2025. Realised cost went from about $14/oz in FY2024 to
+        $31/oz in FY2025 to roughly $90–109/oz in H1 2026. Two advisory firms state that the
+        Nigeria Tax Act 2025 moved gold to 15% ad valorem from January 2026, but Thor's own H1
+        2026 charge of 2.3% of revenue is inconsistent with that. Rather than pick, the model
+        carries both bases behind a switch and stresses the ad valorem case.</p>
+      </details>
+      <details>
+        <summary>Four inconsistencies inside the company's own FY2025 filing</summary>
+        <p>Profit before tax is stated as $196.211m in the income statement but the tax
+        reconciliation opens at $199.317m. Capital expenditure appears as $4.977m in the plant
+        note and $9.879m as sustaining capital in the results release, on different definitions.
+        The pioneer service charge appears as both $4.358m and $3.075m. And the stated royalty
+        rate per ounce does not reconcile to the reported royalty expense. All four are recorded
+        on the register rather than silently resolved; the model works from realised figures
+        where the stated rates do not tie.</p>
+      </details>
+      <details>
+        <summary>What is not modelled</summary>
+        <p>Senegalese fiscal terms for Douta are not modelled - a mining convention was still
+        under discussion with the government as at August 2026. Working capital is not forecast.
+        The capital allowance position under the new uniform schedule is not modelled, because it
+        is unclear whether the 95% mining initial allowance survived the Nigeria Tax Act. Cash
+        above a ceiling is distributed rather than accumulated, which is a modelling convention
+        rather than company policy, adopted so the forecast does not build a cash pile that would
+        flatter finance income.</p>
+      </details>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Yusuf Zayyad Aliyu</strong> — BSc Statistics, FMVA, full member CILRM. Built in Excel with a full assumptions register and automated integrity checks. The
+    workbook is available on request.</p>
+    <p style="margin-top:18px">This is an independent, illustrative analytical exercise prepared
+    from publicly available information for portfolio and educational purposes. It is not
+    investment, financial or legal advice, is not a recommendation regarding any security, and is
+    not affiliated with, endorsed by or prepared on behalf of Thor Explorations Ltd, Segilola
+    Resource Operating Limited, Africa Finance Corporation or any of their affiliates. Historical
+    figures are from published filings. <strong>The reserve depletion calculation is the analyst's
+    own arithmetic on published figures and is not a company statement.</strong> Resource
+    conversion rates, the pioneer holiday expiry, the applicable royalty basis, the forward gold
+    price, Douta timing and all projections are the analyst's own and should be read as
+    sensitivities, not forecasts. An updated mineral resource estimate was expected from the
+    company by the end of 2026 and would supersede the 2021 figures used here.</p>
+    <p style="margin-top:18px">Sources: Thor Explorations Ltd FY2025 audited financial statements
+    and results release, April 2026; Q1 2026 and H1 2026 results releases; updated mineral
+    resource and mineral reserve estimate announcement of 29 March 2021 and the NI 43-101
+    technical report filed May 2021; Douta pre-feasibility study announcement, 26 January 2026;
+    2025 ESTMA report; Africa Finance Corporation financing announcements, April 2019 and April
+    2020; Nigeria Tax Act 2025; Nigerian Minerals and Mining Act 2007; World Bank Commodity
+    Markets Pink Sheet; LBMA analyst survey.</p>
+  </div>
+</footer>
+
+</body>
+</html>
